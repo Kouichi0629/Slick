@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+/* ------------------------------
+    リセット
+------------------------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+body, html,
+div, p, span, blockquote,
+table, tr, th, td,
+ul, ol, dl, li, dt, dd,
+strong, h1, h2, h3, h4, h5,
+header, footer, nav, aside, section {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  color: inherit;
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  overflow-x: hidden;
+  color: #353535;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: middle;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+/* ------------------------------
+    ここから
+------------------------------ */
+
+.wrap {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 980px;
+}
+
+
+/* HEADER */
+header strong {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.bars {
+  display: none;
+}
+
+.bars span {
+  display: block;
+  margin: 6px 0;
+  width: 50px;
+  height: 6px;
+  border-radius: 3px;
+  background: #353535;
+}
+
+.header-menu {
+  padding: 15px 0;
+  background: #353535;
+}
+
+.header-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-menu-list li {
+  margin-right: 25px;
+}
+.header-menu-list li a {
+  color: #fff;
+}
+
+@media screen and (max-width:768px) {
+  .bars {
+    display: block;
+  }
+  .header-menu {
+    display: none;
+  }
+  .header-menu-list li {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* MAIN */
+
+.contents {
+  padding: 40px 0;
+}
+
+.contents h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 2rem;
+  border-bottom: 2px solid #353535;
+}
+
+.contents_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contents_list li {
+  width: 31%;
+}
+
+.contents_list li h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width:768px) {
+  .contents_list li {
+    padding-top: 25px;
+    width: 100%;
+  }
+  .contents_list li:first-child {
+    padding-top: 0;
+  }
+}
+
+/* SLIDER */
+
+.slider {
+  width: 100%;
+}
+
+.slider img {
+  width: 100%;
+}
+
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  padding: 5px 0;
+  text-align: center;
+  background: #afafaf;
+  color: #fff;
+}
+
+
+/* トップに戻る */
+.totop {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  padding: 8px 15px;
+  font-weight: 700;
+  background: #353535;
+  border-radius: 5px;
+  color: #fff;
+}
